@@ -1,4 +1,4 @@
-const host = '192.168.2.113'; // port :8080
+const host = '127.0.0.1'; // port :8080
 
 const path = require('path');
 const webpack = require('webpack');
