@@ -18,9 +18,8 @@ htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
     if (htmlWebpackPlugin.files.favicon) { %>
     <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon" type="image/x-icon"/><%
     } %><%
-    for (item in htmlWebpackPlugin.options.links) { %><%
-      if (typeof item === 'string' || item instanceof String) { item = { href: item, rel: 'stylesheet' } } %>
-    <link<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %> /><%
+    for (item in htmlWebpackPlugin.options.links) { %>
+    <link<% for (key in htmlWebpackPlugin.options.links[item]) { %> <%= key %>="<%= htmlWebpackPlugin.options.links[item][key] %>"<% } %> /><%
     } %>
 </head>
 

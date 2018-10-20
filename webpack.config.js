@@ -29,7 +29,13 @@ const pages = {
 const meta = {
     lang: 'de',
     viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-    unsupportedBrowser: true
+    unsupportedBrowser: true,
+    links: [
+        {
+            href: 'https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800',
+            rel: 'stylesheet'
+        }
+    ]
 };
 
 module.exports = (env, argv) => ({
@@ -169,6 +175,7 @@ module.exports = (env, argv) => ({
                 },
                 unsupportedBrowser: meta.unsupportedBrowser,
                 bodyHtmlSnippet: pages[page].bodyHtmlSnippet,
+                links: meta.links
             });
         }).concat([
             new webpack.ProvidePlugin({
