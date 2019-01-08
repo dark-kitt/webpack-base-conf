@@ -2,7 +2,7 @@
 
 A tiny project, which includes a base webpack configuration.
 
-* sass compiler
+* SCSS compiler
 * ES6 / babel compiler
 * EJS
 * React
