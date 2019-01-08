@@ -7,7 +7,7 @@ A tiny project, which includes a base webpack configuration.
 * EJS
 * React
 
-Created on Debian 9.5.0 amd64 via [VirtualBox 5.2.12](https://virtualbox.org/).
+Created on Debian 9.5.0 AMD64 via [VirtualBox 5.2.12](https://virtualbox.org/).
 
 ---
 
