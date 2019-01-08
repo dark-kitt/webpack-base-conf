@@ -1,0 +1,37 @@
+<% var item, key; %><%
+htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || 'en' %><%
+htmlWebpackPlugin.options.links = htmlWebpackPlugin.options.links || [] %><%
+htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || [] %><%
+htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
+%><!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang %>">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible"><%
+    if (Array.isArray(htmlWebpackPlugin.options.meta)) { %><%
+      for (item in htmlWebpackPlugin.options.meta) { %>
+    <meta<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>><%
+      } %><%
+    } %>
+    <title><%= htmlWebpackPlugin.options.title %></title><%
+    if (htmlWebpackPlugin.files.favicon) { %>
+    <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon" type="image/x-icon"/><%
+    } %><%
+    for (item in htmlWebpackPlugin.options.links) { %>
+    <link<% for (key in htmlWebpackPlugin.options.links[item]) { %> <%= key %>="<%= htmlWebpackPlugin.options.links[item][key] %>"<% } %> /><%
+    } %>
+</head>
+
+<body><%
+    if (htmlWebpackPlugin.options.unsupportedBrowser) { %>
+    <style>.unsupported-browser { display: none; }</style>
+    <div class="unsupported-browser">
+      Sorry, your browser is not supported. Please upgrade to the latest version or switch your browser to use this
+      site. See <a href="http://outdatedbrowser.com/">outdatedbrowser.com</a> for options.
+    </div><%
+    } %><%
+    if (htmlWebpackPlugin.options.bodyHtmlSnippet) { %>
+    <%= htmlWebpackPlugin.options.bodyHtmlSnippet %><%
+    } %>
+    <header>header</header>

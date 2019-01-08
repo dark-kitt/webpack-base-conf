@@ -1,0 +1,31 @@
+#randomInt {
+  background-color: darkblue;
+  border: 1px solid black;
+  color: white;
+  padding: 5px; }
+
+#randomRange {
+  background-color: orange;
+  border: 1px solid black;
+  color: white;
+  padding: 5px; }
+
+.contact {
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  margin-bottom: 20px;
+  background: green; }
+  .contact a {
+    color: white;
+    text-align: center; }
+
+#test {
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+
+/*# sourceMappingURL=main.bundle.css.map*/
