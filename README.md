@@ -20,8 +20,8 @@ Note! Use **`--no-bin-links`** to install the node modules on a virtual machine 
 
 ---
 
-      npm run server:dev = incl. => (webpack-dev-server --mode=development)
+      npm run server:dev => (webpack-dev-server --mode=development)
 
-      (bundle output folder / in dev mode watcher is still available)
-      npm run output:dev = incl. => (webpack --mode=development)
-      npm run output:prod = incl. => (webpack --mode=production)
+      (bundle output folder)
+      npm run output:dev => (webpack --mode=development)
+      npm run output:prod => (webpack --mode=production)
